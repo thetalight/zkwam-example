@@ -1,0 +1,17 @@
+[package]
+name = "zkwasm-demo"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+zkwasm-rust-sdk = { git = "https://github.com/DelphinusLab/zkWasm-rust.git" }
+wasm-bindgen = "0.2.89"
+num-bigint = "0.4.4"
+num-traits = "0.2.17"
+
+[features]
+default = []
+wasmbind = ["zkwasm-rust-sdk/wasmbind"]
